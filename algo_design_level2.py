@@ -29,8 +29,8 @@ def find_average(scores):
     OUTPUT: the average as a float
     Hint: sum(scores) gives you the total; len(scores) gives the count.
     """
-    # YOUR CODE HERE
-    pass
+    average = sum(scores) / len(scores)
+    return average
 
 
 def find_highest(scores):
@@ -39,13 +39,13 @@ def find_highest(scores):
     OUTPUT: the single highest score
     Hint: Python has a built-in max() function.
     """
-    # YOUR CODE HERE
-    pass
+    highest = max(scores)
+    return highest
 
 
 # Quick tests (uncomment to check):
-# print(find_average([80, 90, 70]))   # Expected: 80.0
-# print(find_highest([80, 90, 70]))   # Expected: 90
+#print(find_average([80, 90, 70]))   # Expected: 80.0
+#print(find_highest([80, 90, 70]))   # Expected: 90
 
 
 # ----------------------------------------------------------
@@ -62,9 +62,11 @@ def calculate_stats(scores):
 
     Example return value: {"average": 80.0, "highest": 90}
     """
-    # YOUR CODE HERE
-    pass
-
+    stats_dict = {
+        "average": find_average(scores),
+        "highest": find_highest(scores),
+    }
+    return stats_dict
 
 # ----------------------------------------------------------
 # TASK 2C: Write the display procedure
@@ -80,8 +82,7 @@ def display_report(name, scores, stats):
       - Their highest score (from stats dictionary)
       - Their overall grade (using calculate_grade from Level 1)
     """
-    # YOUR CODE HERE
-    pass
+    print(f"Student name: {name}, student scores: {scores}, student average: {stats["average"]}, student highest: {stats["highest"]}, overall grade: {calculate_grade(stats["average"])}")
 
 
 # ----------------------------------------------------------
@@ -99,14 +100,14 @@ def run_report_system():
        b. Call display_report() with their name, scores, and stats
 
     Example student data:
+    
+    """
     students = [
         {"name": "Alex", "scores": [85, 90, 78]},
         {"name": "Sam",  "scores": [55, 60, 48]},
+        {"name": "John", "scores": [12, 87, 50]},
     ]
-    """
-    # YOUR CODE HERE
-    pass
-
-
+    for i in students:
+        display_report(i["name"], i["scores"], calculate_stats(i["scores"]))
 # Uncomment to run when all subroutines above are complete:
-# run_report_system()
+run_report_system()

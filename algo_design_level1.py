@@ -33,8 +33,8 @@ def square(number):
 
 # YOUR CODE HERE:
 
-print(greet_student("Alex"))
-print(square(7))
+#print(greet_student("Alex"))
+#print(square(7))
 
 
 # ----------------------------------------------------------
@@ -61,7 +61,7 @@ def calculate_grade(score):
 
 
 # Test your function (uncomment these lines when ready):
-print(calculate_grade(95))   # Expected: A
-print(calculate_grade(80))   # Expected: B
-print(calculate_grade(62))   # Expected: C
-print(calculate_grade(40))   # Expected: F
+# print(calculate_grade(95))   # Expected: A
+# print(calculate_grade(80))   # Expected: B
+# print(calculate_grade(62))   # Expected: C
+# print(calculate_grade(40))   # Expected: F
