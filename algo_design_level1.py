@@ -20,8 +20,8 @@ def square(number):
 
 
 # YOUR ANSWERS (fill in the blanks):
-# greet_student is a: ___________  because: ___________
-# square is a:        ___________  because: ___________
+# greet_student is a: procedure  because: it doesn't do any calculations
+# square is a:        function  because: it does calculations
 
 
 # ----------------------------------------------------------
@@ -33,7 +33,7 @@ def square(number):
 
 # YOUR CODE HERE:
 
-print(greet_student("Will"))
+print(greet_student("Alex"))
 print(square(7))
 
 
@@ -50,12 +50,18 @@ print(square(7))
 
 
 def calculate_grade(score):
-    # YOUR CODE HERE
-    pass  # Remove this line when you add your code
+    if score >= 90:
+        return "A"
+    elif score >= 75:
+        return "B"
+    elif score >= 60:
+        return "C"
+    else:
+        return "F"
 
 
 # Test your function (uncomment these lines when ready):
-# print(calculate_grade(95))   # Expected: A
-# print(calculate_grade(80))   # Expected: B
-# print(calculate_grade(62))   # Expected: C
-# print(calculate_grade(40))   # Expected: F
+print(calculate_grade(95))   # Expected: A
+print(calculate_grade(80))   # Expected: B
+print(calculate_grade(62))   # Expected: C
+print(calculate_grade(40))   # Expected: F
