@@ -64,4 +64,4 @@ def calculate_grade(score):
 # print(calculate_grade(95))   # Expected: A
 # print(calculate_grade(80))   # Expected: B
 # print(calculate_grade(62))   # Expected: C
-# print(calculate_grade(40))   # Expected: F
+# print(calculate_grade(40))   # Expected: F 
